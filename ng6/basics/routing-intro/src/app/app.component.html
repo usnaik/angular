@@ -1,14 +1,5 @@
-<h1> Aaida Solutions </h1>
+<h1> ABC Solutions </h1>
 
-<!-- Option 1  -->
-<!-- <a routerLink="home"> Home </a>
-<a routerLink="settings"> Settings </a> -->
-
-<!-- Option 2 -->
-<!-- <a [routerLink]="homeRoute"> Home </a>
-<a [routerLink]="settingsRoute"> Settings </a> -->
-
-<!-- Option 3 -->
 <a *ngFor="let route of routes" [routerLink]="route.url"> {{route.linkName}} </a>
 
 <router-outlet></router-outlet>

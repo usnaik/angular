@@ -7,6 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
+  routes = [
+    {linkName:'Home' , url:'main'},
+    {linkName:'About Us' , url:'about'},
+    {linkName:'Support' , url:'support'}
+  ]
   constructor() { }
 
   ngOnInit() {
