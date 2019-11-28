@@ -1,1 +1,8 @@
-<p>view-comp works!</p>
+Git User Name : <input type="text" [(ngModel)]="userName">
+<button (click)="searchUser()">Search</button> 
+<div *ngIf="response">
+ <p>Login Name: {{response.login}} </p>
+ <p>Repo Count: {{response.public_repos}} </p>
+ <p>Gist Count: {{response.public_gists}} </p>
+ <p>Followers : {{response.followers}} </p>
+</div>
