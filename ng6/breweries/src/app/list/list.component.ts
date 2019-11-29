@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpService } from '../http.service';
+import { MyHttpService } from '../http.service';
 
 @Component({
   selector: 'app-list',
@@ -9,9 +9,14 @@ import { HttpService } from '../http.service';
 
 export class ListComponent implements OnInit {
 
-  constructor(private _http: HttpService) { }
+  brews:Object;
+
+  constructor(private _http: MyHttpService) { }
 
   ngOnInit() {
-    this._http.myMethod();
+    this._http.getBreweries().subscribe((response) => {
+      this.brews = response;
+      console.log(this.brews);
+    });
   }
 }
