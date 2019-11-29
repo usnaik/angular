@@ -1,5 +1,13 @@
-<h1> ABC Solutions </h1>
-
-<a *ngFor="let route of routes" [routerLink]="route.url"> {{route.linkName}} </a>
-
+<header>
+    <div class="container">
+        <a routerLink="/" class="logo">@AI.da Solutions</a>
+        <nav>
+            <ul >
+                <li *ngFor="let route of routes" >
+                    <a  [routerLink]="route.url"> {{route.linkName}} </a> 
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
 <router-outlet></router-outlet>
